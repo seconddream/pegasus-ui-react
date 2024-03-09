@@ -1,0 +1,11 @@
+# .npmignore
+node_modules
+.rollup.cache
+.storybook
+src
+stories
+babel.config.js
+postcss.config.js
+rollup.config.mjs
+tailwind.config.js
+tsconfig.json

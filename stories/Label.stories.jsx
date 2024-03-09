@@ -1,5 +1,5 @@
 import { AiOutlineAim, AiOutlineHome } from 'react-icons/ai'
-import Label from '../components/Label'
+import { Label } from '..'
 import _ from 'lodash'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -20,7 +20,7 @@ export const Playground = {
   args: {
     icon: <AiOutlineHome />,
     text: 'Label',
-    onClose: undefined
+    onClose: undefined,
   },
 }
 
@@ -28,7 +28,7 @@ export const SizeVariations = {
   render: () => {
     return (
       <div className='flex gap-2'>
-        {[ 'sm', 'xs'].map((size) => (
+        {['sm', 'xs'].map((size) => (
           <Label key={size} size={size} icon={<AiOutlineHome />} text={size} />
         ))}
       </div>
