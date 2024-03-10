@@ -66,10 +66,10 @@ export default function ButtonBase(props: ButtonBaseProps) {
       tabIndex={focusable && shouldInteract ? 0 : undefined}
       className={clsx(
         // basic
-        'flex flex-shrink-0 font-medium whitespace-nowrap justify-center items-center transition-all ease-out',
+        'flex font-medium whitespace-nowrap justify-center items-center transition-all ease-out',
         // sizing
-        circle || !children ? squireSize : [height, px],
-        block && !circle && !children && 'w-full',
+        circle ? squireSize : [height, px],
+        block && 'w-full',
         circle ? 'rounded-full' : roundCorner,
         fontSize,
         gap,

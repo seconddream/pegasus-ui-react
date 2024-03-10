@@ -79,7 +79,7 @@ export interface LabelProps extends WithOptionalId {
 
 export default function Label(props: LabelProps) {
   const { id, size = 'xs', color = 'dark', bordered = false, shadow = false, icon, text, onClick, onClose } = props
-  const {height, px, fontSize, iconSize, gap, roundCorner,} = FixedHeightItemSizeStyles[size]
+  const {height, px, fontSize, iconSize, gap, roundCorner} = FixedHeightItemSizeStyles[size]
   return (
     <div
       onClick={(e)=>{
@@ -89,7 +89,8 @@ export default function Label(props: LabelProps) {
       }}
       id={id}
       className={clsx(
-        'flex whitespace-nowrap hyphens-auto justify-center items-center',
+        'flex whitespace-nowrap justify-center items-center max-w-full',
+        onClick && 'hover:cursor-pointer',
         // sizing
         height, px, fontSize, gap, roundCorner,
         // color
@@ -99,8 +100,8 @@ export default function Label(props: LabelProps) {
       )}
     >
       {icon && <span className={clsx(iconSize)}>{icon}</span>}
-      {text}
-      {onClose && <AiOutlineCloseCircle className={clsx(iconSize)} onClick={(e)=>{
+      <span className=' w-full text-ellipsis overflow-hidden'>{text}</span>
+      {onClose && <AiOutlineCloseCircle className={clsx(iconSize, 'hover:cursor-pointer')} onClick={(e)=>{
         e.preventDefault()
         e.stopPropagation()
         onClose()

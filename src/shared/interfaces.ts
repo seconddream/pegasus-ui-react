@@ -17,7 +17,7 @@ export interface WithActionState {
 
 export type FixedHeightItemSize = 'lg' | 'md' | 'sm' | 'xs'
 export interface WithFixedHeightItemSize {
-  size: FixedHeightItemSize
+  size?: FixedHeightItemSize
 }
 
 export type LayoutSpacing =
@@ -27,7 +27,7 @@ export type LayoutSpacing =
   | 'tight'
   | 'extraTight'
 export interface WithLayoutSpacing {
-  spacing: LayoutSpacing
+  spacing?: LayoutSpacing
 }
 
 export type Direction = 'horizontal' | 'vertical'
@@ -87,3 +87,6 @@ export const AnimationClassMap = {
 
 export type AnimationType = 'fade-in' | 'slide-up' | 'slide-down' | 'centered-slide-up' | 'centered-slide-down'
 
+export interface Withlocale {
+  locale?: string
+}
