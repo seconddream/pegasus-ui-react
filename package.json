@@ -1,9 +1,10 @@
 {
   "name": "pegasus-ui-react",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "",
   "main": "dist/cjs/bundle.js",
   "module": "dist/esm/bundle.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "storybook": "storybook dev -p 6006",
@@ -41,11 +42,10 @@
     "@types/react-dom": "^18.2.21",
     "autoprefixer": "^10.4.18",
     "css-loader": "^6.10.0",
+    "lodash": "^4.17.21",
     "postcss": "^8.4.35",
     "postcss-loader": "^8.1.1",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "rollup": "^4.12.1",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -57,12 +57,15 @@
   "dependencies": {
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
-    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.0.1"
   },
   "peerDependencies": {
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.0.1"
   }
 }

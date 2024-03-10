@@ -72,7 +72,7 @@ export function Form(props: FormProps) {
   )
 }
 
-export interface FormSection
+export interface FormSectionProps
   extends WithOptionalId,
     WithLayoutSpacing,
     WithDirection,
@@ -83,7 +83,7 @@ export interface FormSection
   tools?: any[]
   children: any
 }
-export function FormSection(props: FormSection) {
+export function FormSection(props: FormSectionProps) {
   const {
     id,
     spacing = 'normal',
